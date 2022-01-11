@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widli=device-widli, initial-scale=1.0">
+    <title>git cheat sheets</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html"><img src="../img/logo.png" alt="logo"></a>
+        </nav>
+        <section style="text-align: right; margin-right: 1em;">
+            <button onclick="darkMode()" title="dark mode"><i class="fas fa-moon"></i></button>
+            <button onclick="lightMode()" title="light mode" style="color: #F0C27B;"><i class="fas fa-sun"></i></button>
+            <!-- GTranslate: https://gtranslate.io/ -->
+            <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl"
+                style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16"
+                    width="16" alt="English" /></a>
+            <a href="#" onclick="doGTranslate('en|de');return false;" title="Deutsch" class="gflag nturl"
+                style="background-position:-300px -100px;"><img src="//gtranslate.net/flags/blank.png" height="16"
+                    width="16" alt="German" /></a>
+
+            <div id="google_translate_element2"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit2() { new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element2'); }
+            </script>
+            <script type="text/javascript"
+                src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2">
+                </script>
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                eval(function (p, a, c, k, e, r) { e = function (c) { return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
+/* ]]> */
+            </script>
+        </section>
+    </header>
+    <main class="cheatsheet">
+        <h1>git cheat sheets</h1>
+        <!-- How to Set Up-->
+        <section>
+            <details>
+                <summary>How to Set Up</summary>
+                <article>
+                    <ul>
+                        <li>
+                            <h3>Key/Command</h3>
+                        </li>
+                        <li>
+                            <h3>Description</h3>
+                        </li>
+
+                        <li>git init</li>
+                        <li>
+                            Initialises the current directory as a new Git
+                            repository.
+                        </li>
+
+                        <li>git clone &lt;source-path&gt;</li>
+                        <li>
+                            Clones a local repository to the current directory.
+                        </li>
+
+                        <li>git clone &lt;source-url&gt;</li>
+                        <li>
+                            Clones an existing repository from the hosted location to
+                            the current directory.
+                        </li>
+                    </ul>
+                </article>
+            </details>
+        </section>
+        <!-- How to Configure-->
+        <section>
+            <details>
+                <summary>How to Configure</summary>
+                <article>
+                    <ul>
+                        <li>
+                            <h3>Key/Command</h3>
+                        </li>
+                        <li>
+                            <h3>Description</h3>
+                        </li>
+
+                        <li>
+                            git config --global user.name "&lt;your-name&gt;"
+                        </li>
+                        <li>
+                            Sets the name for the user when making commits.
+                        </li>
+
+                        <li>
+                            git config --global user.email "&lt;your-email&gt;"
+                        </li>
+                        <li>
+                            Sets the email address for the user
+                            when making commits.
+                        </li>
+
+                        <li>
+                            git config --global color.ui auto
+                        </li>
+                        <li>
+                            Sets automatic colouring on command lines
+                            (and makes reviewing easier!)
+                        </li>
+
+                        <li>
+                            git config --system core.editor &lt;text-editor-path&gt;
+                        </li>
+                        <li>
+                            Sets your preferred
+                            text editor.
+                        </li>
+
+                        <li>
+                            git config (--global | --system | --local) --edit
+                        </li>
+                        <li>
+                            Opens one of Git’s configuration files:
+                            either the global, system, or local one.
+                        </li>
+                    </ul>
+                </article>
+            </details>
+        </section>
+        <!-- How to Add Files-->
+        <section>
+            <details>
+                <summary>How to Add Files</summary>
+                <article>
+                    <ul>
+                        <li>
+                            <h3>Key/Command</h3>
+                        </li>
+                        <li>
+                            <h3>Description</h3>
+                        </li>
+
+                        <li>
+                            git add (&lt;file-name&gt; |
+                            &lt;directory-name&gt;)
+                        </li>
+                        <li>
+                            Text that describes
+                            the sample code.
+                        </li>
+
+                        <li>
+                            git add .
+                        </li>
+                        <li>
+                            Adds all new, modified and deleted
+                            files in the current folder.
+                        </li>
+
+                        <li>
+                            git add –A
+                        </li>
+                        <li>
+                            Adds all new, modified and deleted
+                            files in all directories in the repository.
+                        </li>
+
+                        <li>
+                            git add –u
+                        </li>
+                        <li>
+                            Updates the staging area to match every directories
+                            modified and deleted files, but doesn’t add new files.
+                        </li>
+                    </ul>
+                </article>
+            </details>
+        </section>
+        <!-- How to Commit & Tag-->
+        <section>
+            <details>
+                <summary>How to Commit &amp; Tag</summary>
+                <article>
+                    <ul>
+                        <li>
+                            <h3>Key/Command</h3>
+                        </li>
+                        <li>
+                            <h3>Description</h3>
+                        </li>
+
+                        <li>
+                            git commit –m "message"
+                        </li>
+                        <li>
+                            Commits all staged content.
+                        </li>
+
+
+                        <li>git commit -a</li>
+                        <li>
+                            Stages any modified or delete files,
+                            and then commits all files that are staged.
+                        </li>
+
+                        <li>git commit --amend</li>
+                        <li>
+                            Replaces the last commit with
+                            changes that you later supply.
+                        </li>
+
+                        <li>git tag</li>
+                        <li>
+                            Lists all the tags in the repository.
+                        </li>
+
+                        <li>git tag &lt;tag-name&gt;</li>
+                        <li>
+                            Tags the head commit with
+                            the supplied tag-name.
+                        </li>
+                    </ul>
+                </article>
+            </details>
+        </section>
+        <!-- How to Connect, Push & Pull -->
+        <section>
+            <details>
+                <summary>How to Connect, Push &amp; Pull</summary>
+                <article>
+                    <ul>
+                        <li>
+                            <h3>Key/Command</h3>
+                        </li>
+                        <li>
+                            <h3>Description</h3>
+                        </li>
+
+                        <li>
+                            git remote add
+                            &lt;remote-alias&gt;
+                            &lt;url&gt;
+                        </li>
+                        <li>
+                            Adds an alias to the new remote
+                            repository at &lt;url&gt;
+                        </li>
+
+                        <li>git push &lt;remote-alias&gt;</li>
+                        <li>
+                            Pushes the current branch to the remote
+                            repository with all commits and objects.
+                        </li>
+
+                        <li>
+                            git push --all
+                            &lt;remote-alias&gt;
+                        </li>
+                        <li>
+                            Pushes all local branches
+                            to remote repository.
+                        </li>
+
+                        <li>
+                            git fetch
+                            &lt;remote-alias&gt;
+                            &lt;branch-name&gt;
+                        </li>
+                        <li>
+                            Fetches a specific branch,
+                            without changing your local files.
+                        </li>
+
+                        <li>
+                            git pull
+                            &lt;remote-alias&gt;
+                        </li>
+                        <li>
+                            Fetches all branches, and merges
+                            changes into the local files.
+                        </li>
+                    </ul>
+                </article>
+            </details>
+        </section>
+    </main>
+</body>
+
+</html>

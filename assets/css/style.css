@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 /* general */
+.dark-mode {
+    background-color: #292C34;
+    color: #F0C27B;
+    text-shadow: .1em .1em #5614B0;
+  }
+  .light-mode {
+    background-color: #D4D3DD;
+    color: #292C34;
+    text-shadow: none;
+  }
 body{
     background: #292C34;
     color: #F0C27B;
@@ -18,10 +28,18 @@ h1{
 }
 
 /* header */
+header{
+    position: relative;
+}
 nav img{
     margin: 1em;
     width: 15%;
     box-shadow: 0.08em .1em .5em #5614B0;
+}
+header section{
+    position: absolute;
+    top:15%;
+    right: 2%;
 }
 header section a.gflag {
         vertical-align: middle;
@@ -55,39 +73,37 @@ header section #google_translate_element2 {
     display: none !important;
 }
 /* main index */
-.index{
-    margin:1em 2em;
-}
 .index div{
     text-align: center;
     width: 70%;
-    margin: 0 auto;
+    margin: 2em auto;
     padding: 2em;
 }
 .index div h1{
     font-size: 2em;
+    margin-bottom: .5em;
 }
 .index section{
-    position: relative;
-    width: 30vw;
-    display: inline-block;
-    margin-left: .9em;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.index section a{
+    display: flex;
+    width: 30%;
+    margin-bottom: 2em;
+}
+.index a:not(:nth-of-type(3n)){
+    margin-right: 2em;
 }
 .index article{
-    margin-right: 2em;
-    position: absolute;
-    height: 40vh;
     padding: 1em;
     background-color: #2B323D;
     transition: top .2s ease, box-shadow .2s ease, -webkit-box-shadow .2s ease;
-    top: 0;
-    box-shadow: 0 0 0 transparent;
     border-radius: 5px;
     text-align: center;
 }
 .index article:hover{
-    top: -0.5rem;
-    -webkit-box-shadow: 0 0.2rem 0.8rem rgb(36 36 36 / 15%);
     box-shadow: 0 0.1rem 0.9rem #F0C27B;    
 }
 .index article i{
@@ -183,6 +199,7 @@ details ul li:nth-child(1), details ul li:nth-child(2){
 }
 details ul li:nth-of-type(odd){
     width: 28%;
+    font-weight: 600;
 }
 details ul li:nth-of-type(even){
     width: 70%;
@@ -191,9 +208,6 @@ details ul li:nth-of-type(even){
 }
 /* main cheatsheet */
 footer{
-    position:fixed;
     text-align: center;
-    bottom:.2em;
-    z-index:1;
-    width:100%;
+    margin:2em 0;
 }
